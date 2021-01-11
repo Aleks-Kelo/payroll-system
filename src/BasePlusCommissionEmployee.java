@@ -1,4 +1,5 @@
-
+import java.time.LocalDate;
+import java.util.Date;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee{
 
@@ -22,8 +23,8 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
     }
 
 
-    public BasePlusCommissionEmployee(String name, String lastName, String SSN, double grossSales, double commissionRate,double baseSalary) {
-        super(name, lastName, SSN, grossSales, commissionRate);
+    public BasePlusCommissionEmployee(String name, String lastName, String SSN, LocalDate birthDate, double grossSales, double commissionRate, double baseSalary) {
+        super(name, lastName, SSN,birthDate, grossSales, commissionRate);
         setBaseSalary(baseSalary);
     }
 

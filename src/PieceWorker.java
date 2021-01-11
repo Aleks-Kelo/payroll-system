@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.util.Date;
+
 public class PieceWorker extends Employee{
 
 
@@ -31,8 +34,8 @@ public class PieceWorker extends Employee{
         return wage * pieces;
     }
 
-    public PieceWorker(String name, String lastName, String SSN,double wage, int pieces) {
-        super(name, lastName, SSN);
+    public PieceWorker(String name, String lastName, String SSN, LocalDate birthDate, double wage, int pieces) {
+        super(name, lastName, SSN ,birthDate);
         setWage(wage);
         setPieces(pieces);
 

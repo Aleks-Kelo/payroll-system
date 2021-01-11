@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.Date;
 
 public class HourlyEmployee extends Employee{
 
@@ -37,8 +39,8 @@ public class HourlyEmployee extends Employee{
         }
     }
 
-    public HourlyEmployee(String name, String lastName, String SSN, double hourlyWage , double hoursWorked) {
-        super(name, lastName, SSN);
+    public HourlyEmployee(String name, String lastName, String SSN, LocalDate birthDate, double hourlyWage , double hoursWorked) {
+        super(name, lastName, SSN, birthDate);
         setHourlyWage(hourlyWage);
         setHoursWorked(hoursWorked);
     }

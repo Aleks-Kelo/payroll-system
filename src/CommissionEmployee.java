@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.Date;
 
 public class CommissionEmployee extends Employee{
 
@@ -33,8 +35,8 @@ public class CommissionEmployee extends Employee{
         return commissionRate * grossSales;
     }
 
-    public CommissionEmployee(String name, String lastName, String SSN, double grossSales, double commissionRate) {
-        super(name, lastName, SSN);
+    public CommissionEmployee(String name, String lastName, String SSN, LocalDate birthDate, double grossSales, double commissionRate) {
+        super(name, lastName, SSN, birthDate);
         setGrossSales(grossSales);
         setCommissionRate(commissionRate);
     }

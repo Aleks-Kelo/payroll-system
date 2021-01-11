@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class Employee {
@@ -32,29 +33,34 @@ public abstract class Employee {
         SSN = employeeSSN;
     }
 
-    public Employee(String name,String lastName,String SSN){
+    public Employee(String name,String lastName,String SSN,LocalDate birthDate){
         this.name = name;
         this.lastName = lastName;
         this.SSN = SSN;
+        this.birthDate = birthDate;
     }
 
     public abstract double Earnings();
+
+
 
     @Override
     public String toString() {
         return "Employee" +
                 " name=" + getName() +
                 ", last name=" + getLastName()+
-                ", SSN=" + getSSN() +", ";
+                ", SSN=" + getSSN()+
+                ", Birthday =" + getBirthDate() +", ";
     }
 
-    //    private Date birthDate;
-//
-//    public Date getBirthDate() {
-//        return birthDate;
-//    }
-//
-//    public void setBirthDate(Date birthDate) {
-//        this.birthDate = birthDate;
-//    }
+    private LocalDate birthDate;
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
 }
